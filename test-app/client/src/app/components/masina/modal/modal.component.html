@@ -1,0 +1,36 @@
+<div class='modal-header'>
+    <h4 class='modal-title'>{{id_information ? 'Modificare' : 'Adăugare'}} informație</h4>
+  </div>
+  
+  <div class='modal-body'>
+    <div class='row'>
+      <label class='col-2 control-label'>Nume*</label>
+      <div class='col-2'>
+        <input [(ngModel)]='modal.name' class='form-control' placeholder='Nume...' maxlength='100' />
+      </div>
+      <label class='col-2 control-label'>Prenume*</label>
+      <div class='col-2'>
+        <input [(ngModel)]='modal.name' class='form-control' placeholder='Prenume...' maxlength='100' />
+      </div>
+      <label class='col-2 control-label'>Varsta*</label>
+      <div class='col-2'>
+        <input [(ngModel)]='modal.name' class='form-control' placeholder='Varsta...' maxlength='100' />
+      </div>
+    </div>
+  
+    <div class='row'>
+      <label class='col-2 control-label'>Denumire marca*</label>
+      <div class='col-3 '>
+        <input type='number' [(ngModel)]='modal.type' class='form-control' placeholder='Denumire marca...' maxlength='2' />
+      </div>
+      <div class='col-1'>
+        <input type='checkbox' [checked]='modal.liked' class="form-check-input float-end" [(ngModel)]='modal.liked' />
+      </div>
+      <label class='col-5 p-2 text-start'>Apreciat</label>
+    </div>
+  </div>
+  
+  <div class='modal-footer'>
+    <button type='button' class='btn btn-outline-dark' (click)='activeModal.dismiss()'>Renunță</button>
+    <button type='button' class='btn btn-success' (click)='save()'>Salvează</button>
+  </div>
